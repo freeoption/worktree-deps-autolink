@@ -1,0 +1,22 @@
+{
+  "name": "worktree-deps-autolink",
+  "version": "0.1.0",
+  "description": "Auto-link untracked top-level files from the main Git worktree into newly added worktrees.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "worktree-deps-autolink": "bin/worktree-deps-autolink.cjs"
+  },
+  "scripts": {
+    "postinstall": "node install.cjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "install.cjs",
+    "link-untracked.cjs"
+  ],
+  "engines": {
+    "node": ">=14"
+  }
+}
