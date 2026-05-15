@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 const { install, uninstall, printStatus } = require('../lib/install.cjs');
 
-const command = process.argv[2] || 'install';
+const command = process.argv[2] || 'link';
 
 async function main() {
+    if (command === 'link' || command === 'run') {
+        require('../link-untracked.cjs');
+        return;
+    }
+
     if (command === 'install' || command === 'init') {
         await install({ cwd: process.cwd(), quiet: false });
         return;
@@ -20,7 +25,7 @@ async function main() {
     }
 
     console.error(`Unknown command: ${command}`);
-    console.error('Usage: worktree-deps-autolink [install|init|uninstall|status]');
+    console.error('Usage: worktree-deps-autolink [link|run|install|init|uninstall|status]');
     process.exitCode = 1;
 }
 

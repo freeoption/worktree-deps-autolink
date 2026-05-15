@@ -17,10 +17,14 @@ git config core.hooksPath <main-repo>/.git/worktree-deps-autolink/_
 也可以手动执行：
 
 ```sh
+npx worktree-deps-autolink
+npx worktree-deps-autolink link
 npx worktree-deps-autolink install
 npx worktree-deps-autolink status
 npx worktree-deps-autolink uninstall
 ```
+
+不带参数或使用 `link` 会立即在当前目录运行链接逻辑，适合在已有 worktree 中手动补链。
 
 ## 触发条件
 

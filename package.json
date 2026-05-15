@@ -1,6 +1,6 @@
 {
   "name": "worktree-deps-autolink",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Auto-link untracked top-level files from the main Git worktree into newly added worktrees.",
   "license": "MIT",
   "type": "commonjs",
